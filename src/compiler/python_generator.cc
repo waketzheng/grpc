@@ -773,12 +773,17 @@ bool PrivateGenerator::PrintPreamble(grpc_generator::Printer* out) {
           out->Print(
               var,
               "(\n"
-              "    f'The grpc package installed is at version {GRPC_VERSION},'\n"
-              "    f' but the generated code in {Path(__file__).name} depends on'\n"
+              "    f'The grpc package installed is at version "
+              "{GRPC_VERSION},'\n"
+              "    f' but the generated code in {Path(__file__).name} depends "
+              "on'\n"
               "    f' grpcio>={GRPC_GENERATED_VERSION}.'\n"
-              "    f' Please upgrade your grpc module to grpcio>={GRPC_GENERATED_VERSION}'\n"
-              "    f' or downgrade your generated code using grpcio-tools<={GRPC_VERSION}.'\n"
-              "    f' This warning will become an error in {EXPECTED_ERROR_RELEASE},'\n"
+              "    f' Please upgrade your grpc module to "
+              "grpcio>={GRPC_GENERATED_VERSION}'\n"
+              "    f' or downgrade your generated code using "
+              "grpcio-tools<={GRPC_VERSION}.'\n"
+              "    f' This warning will become an error in "
+              "{EXPECTED_ERROR_RELEASE},'\n"
               "    f' scheduled for release on {SCHEDULED_RELEASE_DATE}.'\n"
               "),\n"
               "RuntimeWarning\n");
